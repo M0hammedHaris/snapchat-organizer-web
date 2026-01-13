@@ -72,3 +72,92 @@
     transform: translateY(-1px);
     box-shadow: 0 4px 12px var(--accent-glow);
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 0.5rem;
+    }
+
+    .navContainer {
+        padding: 0.5rem 1rem;
+    }
+
+    .logo {
+        gap: 0.5rem;
+    }
+
+    .logoIcon {
+        width: 1.75rem;
+        height: 1.75rem;
+        font-size: 0.875rem;
+    }
+
+    .logoText {
+        font-size: 1rem;
+    }
+
+    .nav {
+        gap: 1rem;
+    }
+
+    .link {
+        font-size: 0.8rem;
+    }
+
+    .downloadBtn {
+        padding: 0.4rem 0.875rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0.75rem 0.25rem;
+    }
+
+    .navContainer {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .logo {
+        gap: 0.4rem;
+    }
+
+    .logoIcon {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.75rem;
+    }
+
+    .logoText {
+        font-size: 0.875rem;
+    }
+
+    .nav {
+        gap: 0.625rem;
+    }
+
+    .link {
+        font-size: 0.75rem;
+    }
+
+    .downloadBtn {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .logoText {
+        display: none;
+    }
+
+    .nav {
+        gap: 0.5rem;
+    }
+
+    .downloadBtn {
+        padding: 0.375rem 0.625rem;
+    }
+}
