@@ -1,21 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaApple, FaWindows, FaGithub } from 'react-icons/fa';
+import { FaApple, FaWindows, FaLinux, FaGithub } from 'react-icons/fa';
 import styles from './Download.module.css';
 
 export const Download: React.FC = () => {
-    const [releaseUrl] = useState("https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/latest");
-    const [version] = useState("v1.0.0");
+    const [releaseUrl] = useState("https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/tag/v1.0.2-alpha");
+    const [version] = useState("v1.0.2-alpha");
 
-    useEffect(() => {
-        // In a real scenario, we could fetch the latest release tag from GitHub API
-        // fetch('https://api.github.com/repos/M0hammedHaris/snapchat-organizer-desktop/releases/latest')
-        //   .then(res => res.json())
-        //   .then(data => {
-        //     setReleaseUrl(data.html_url);
-        //     setVersion(data.tag_name);
-        //   });
-    }, []);
+    const downloads = {
+        macOS: "https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/download/v1.0.2-alpha/Snapchat-Organizer-macOS.dmg",
+        windows: "https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/download/v1.0.2-alpha/Snapchat-Organizer-Windows.zip",
+        linux: "https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/download/v1.0.2-alpha/Snapchat-Organizer-Linux.tar.gz"
+    };
 
     return (
         <section id="download" className={styles.section}>
@@ -34,16 +30,24 @@ export const Download: React.FC = () => {
                     </p>
 
                     <div className={styles.btnGroup}>
-                        <a href={releaseUrl} className={styles.downloadBtn}>
+                        <a href={downloads.macOS} className={styles.downloadBtn} target="_blank" rel="noopener noreferrer">
                             <FaApple className={styles.osIcon} /> macOS
                         </a>
-                        <a href={releaseUrl} className={styles.downloadBtn}>
+                        <a href={downloads.windows} className={styles.downloadBtn} target="_blank" rel="noopener noreferrer">
                             <FaWindows className={styles.osIcon} /> Windows
+                        </a>
+                        <a href={downloads.linux} className={styles.downloadBtn} target="_blank" rel="noopener noreferrer">
+                            <FaLinux className={styles.osIcon} /> Linux
                         </a>
                     </div>
 
-                    <div className="mt-16 text-sm text-gray-500">
-                        <a href={releaseUrl} className="hover:text-white flex items-center justify-center gap-2 transition-colors">
+                    <div className={styles.releaseNotes}>
+                        <a
+                            href={releaseUrl}
+                            className={styles.releaseLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <FaGithub /> View Release Notes
                         </a>
                     </div>
