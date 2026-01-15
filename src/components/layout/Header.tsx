@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import styles from './Header.module.css';
 
@@ -16,9 +17,10 @@ export const Header: React.FC = () => {
                 </div>
 
                 <nav className={styles.nav}>
-                    <a href="#features" className={styles.link}>Features</a>
-                    <a href="#download" className={styles.downloadBtn}>
-                        Download
+                    <Link to="/" className={styles.link}>Home</Link>
+                    <Link to="/guide" className={styles.link}>Guide</Link>
+                    <a href="/#download" className={styles.downloadBtn}>
+                        Download App
                     </a>
                 </nav>
             </div>
