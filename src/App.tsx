@@ -1,21 +1,21 @@
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/layout/Header';
-import { Hero } from './components/hero/Hero';
-import { Features } from './components/features/Features';
-import { Download } from './components/download/Download';
 import { Footer } from './components/layout/Footer';
+import { Home } from './pages/Home';
+import { Guide } from './pages/Guide';
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <main>
-        <Hero />
-        <Features />
-        <Download />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="app flex flex-col min-h-screen">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/guide" element={<Guide />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
