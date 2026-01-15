@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
         >
             <div className={`glass-panel ${styles.navContainer}`}>
                 <div className={styles.logo}>
-                    <div className={styles.logoIcon}>S</div>
+                    <img src="/favicon.png" alt="SnapOrganizer Logo" className={styles.logoIcon} />
                     <span className={styles.logoText}>SnapOrganizer</span>
                 </div>
 
