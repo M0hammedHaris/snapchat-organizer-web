@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaDownload, FaGithub } from 'react-icons/fa';
+import { FaDownload } from 'react-icons/fa';
 import styles from './Hero.module.css';
 import heroMockup from '../../assets/images/hero-mockup.png';
 
@@ -40,9 +40,9 @@ export const Hero: React.FC = () => {
                         <a href="#download" className={styles.primaryBtn}>
                             <FaDownload /> Download App
                         </a>
-                        <a href="https://github.com/M0hammedHaris/snapchat-organizer-desktop" target="_blank" rel="noopener" className={styles.secondaryBtn}>
+                        {/* <a href="https://github.com/M0hammedHaris/snapchat-organizer-desktop" target="_blank" rel="noopener" className={styles.secondaryBtn}>
                             <FaGithub /> View on GitHub
-                        </a>
+                        </a> */}
                     </div>
                 </motion.div>
 
