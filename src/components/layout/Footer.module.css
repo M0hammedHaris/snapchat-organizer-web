@@ -20,6 +20,23 @@
     color: var(--text-secondary);
 }
 
+.links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.legalLink {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.legalLink:hover {
+    color: #fff;
+}
+
 .socials {
     display: flex;
     gap: 1.5rem;
@@ -32,4 +49,13 @@
 
 .socialLink:hover {
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+    }
 }
