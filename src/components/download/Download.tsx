@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaApple, FaWindows, FaLinux, FaGithub } from 'react-icons/fa';
+import { FaApple, FaWindows, FaLinux } from 'react-icons/fa';
 import styles from './Download.module.css';
 
 export const Download: React.FC = () => {
-    const [releaseUrl] = useState("https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/tag/v1.0.2-alpha");
-    const [version] = useState("v1.0.2-alpha");
+    const [releaseUrl] = useState("https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/tag/v1.0.0-beta.1");
+    const [version] = useState("v1.0.0-beta.1");
 
     const downloads = {
-        macOS: "https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/download/v1.0.2-alpha/Snapchat-Organizer-macOS.dmg",
-        windows: "https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/download/v1.0.2-alpha/Snapchat-Organizer-Windows.zip",
-        linux: "https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/download/v1.0.2-alpha/Snapchat-Organizer-Linux.tar.gz"
+        macOS: "https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/download/v1.0.0-beta.1/Snapchat-Organizer-macOS.dmg",
+        windows: "https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/download/v1.0.0-beta.1/Snapchat-Organizer-Windows.zip",
+        linux: "https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/download/v1.0.0-beta.1/Snapchat-Organizer-Linux.tar.gz"
     };
 
     return (
@@ -25,8 +25,8 @@ export const Download: React.FC = () => {
                 >
                     <h2 className={styles.title}>Ready to Organize?</h2>
                     <p className={styles.description}>
-                        Get the latest version ({version}) for your operating system.
-                        <br /> Open source and free forever.
+                        Get the latest beta ({version}) for your operating system.
+                        <br /> Free tier available &mdash; upgrade anytime for Pro features.
                     </p>
 
                     <div className={styles.btnGroup}>
