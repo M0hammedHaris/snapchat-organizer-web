@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FaApple, FaWindows, FaLinux } from 'react-icons/fa';
 import styles from './Download.module.css';
 
-export const Download: React.FC = () => {
-    const [releaseUrl] = useState("https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/tag/v1.0.0-beta.1");
-    const [version] = useState("v1.0.0-beta.1");
+const version = import.meta.env.VITE_RELEASE_VERSION as string;
+const baseUrl = import.meta.env.VITE_DOWNLOAD_BASE_URL as string;
 
+export const Download: React.FC = () => {
     const downloads = {
-        macOS: "https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/download/v1.0.0-beta.1/Snapchat-Organizer-macOS.dmg",
-        windows: "https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/download/v1.0.0-beta.1/Snapchat-Organizer-Windows.zip",
-        linux: "https://github.com/M0hammedHaris/snapchat-organizer-desktop/releases/download/v1.0.0-beta.1/Snapchat-Organizer-Linux.tar.gz"
+        macOS: `${baseUrl}/${version}/Snapchat-Organizer-macOS.dmg`,
+        windows: `${baseUrl}/${version}/Snapchat-Organizer-Windows.zip`,
+        linux: `${baseUrl}/${version}/Snapchat-Organizer-Linux.tar.gz`,
     };
 
     return (
@@ -38,17 +38,6 @@ export const Download: React.FC = () => {
                         </a>
                         <a href={downloads.linux} className={styles.downloadBtn} target="_blank" rel="noopener noreferrer">
                             <FaLinux className={styles.osIcon} /> Linux
-                        </a>
-                    </div>
-
-                    <div className={styles.releaseNotes}>
-                        <a
-                            href={releaseUrl}
-                            className={styles.releaseLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaGithub /> View Release Notes
                         </a>
                     </div>
                 </motion.div>
